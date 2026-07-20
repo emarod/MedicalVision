@@ -1,0 +1,9 @@
+fastapi==0.110.0
+uvicorn==0.28.0
+python-multipart==0.0.9
+torch==2.2.1 --index-url https://download.pytorch.org/ From/cpu
+torchvision==0.17.1 --index-url https://download.pytorch.org/ From/cpu
+medmnist==3.0.1
+Pillow==10.2.0
+streamlit==1.32.0
+requests==2.31.0
