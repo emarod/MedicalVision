@@ -1,0 +1,12 @@
+steps:
+  # Paso 1: Compilar la imagen de Docker usando el contexto de la raíz explicitamente (.)
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/retinia-app:latest', '.']
+
+  # Paso 2: Subir la imagen compilada al Artifact Registry / Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/retinia-app:latest']
+
+# Parámetros de configuración globales para evadir las restricciones de IAM de logs
+options:
+  logging: CLOUD_LOGGING_ONLY
